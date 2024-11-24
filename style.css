@@ -1,5 +1,6 @@
 main{
-    margin-top: 200px;
+    margin-top: 70px; 
+    margin-bottom: 70px;
 }
 body {
     font-family: Arial, sans-serif;
@@ -15,14 +16,14 @@ header {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed; top: 0px; width: 100%;
+
 }
 footer{
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed; bottom: 0px; width: 100%;
+   
 }
 
 header nav a {
@@ -87,7 +88,7 @@ body.dark-mode .integrante {
     transition: transform 0.3s ease;
 }
 
-.integrante img:hover {
+.integrante img:hover, .card:hover, .slide-menu .link:hover {
     transform: scale(1.1);
 }
 
@@ -122,6 +123,9 @@ form button {
 form button:hover {
     background-color: #555;
 }
+#dark-mode{
+    background-color: #333;
+}
 
 body.dark-mode form {
     background-color: #333;
@@ -139,7 +143,7 @@ body.dark-mode form input, body.dark-mode form textarea {
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 50px; /* Tamanho do círculo */
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -166,8 +170,6 @@ body.dark-mode form input, body.dark-mode form textarea {
     padding: 20px;
     gap: 20px;
     transition: left 0.3s ease;
-    
-    overflow-y: auto;
 }
 
 .slide-menu p {
@@ -186,13 +188,12 @@ body.dark-mode form input, body.dark-mode form textarea {
     margin-top: 20px;
 }
 
-.slide-menu .link:hover {
-    transform: scale(1.3);
-}
-
-
 .slide-menu.open {
     left: 0;
+}
+
+.botao-dark{
+    background-color: #333;
 }
   
 .slide-menu a .slide-menu button {
@@ -213,3 +214,79 @@ body.dark-mode form input, body.dark-mode form textarea {
 .slide-menu a:hover {
     background-color: #333;
 }
+
+main h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.integrante-galeria {
+    margin: 20px auto;
+    height: 300px;
+    padding: 20px;
+    max-width: 900px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.integrante-galeria h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    max-width: calc(33.33% - 10px);
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.integrante-foto {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.integrante-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+body.dark-mode .integrante-galeria {
+    background-color: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    border-color: #666;
+    color: #ddd;
+}
+
+body.dark-mode .integrante-galeria h3 {
+    color: #ddd;
+}
+
